@@ -1,0 +1,53 @@
+Array:
+ 
+1.Find Common Elements Between Two Arrays
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = [3, 4, 5, 6];
+
+2.Rotate Array by N Positions
+const arr = [1, 2, 3, 4, 5];
+const n = 2;
+3.Count Frequency of Each Element
+const input = ["apple", "banana", "apple", "cherry", "banana", "apple"];
+4.Reverse an Array
+const input = [10, 20, 30, 40, 50];
+5.Filter Words Starting with a Letter
+const words = ["Apple", "Banana", "Avocado", "Cherry", "Apricot"];
+const letter = "A";
+ 
+object :
+ 
+1.Access Nested Properties from given array
+const user = { name: "Alice", address: { city: "Mumbai", zip: "400001" } };
+2.Count Occurrences of Values
+const input = ["cat", "dog", "cat", "bird", "dog", "dog"];
+3.Flatten a Nested Object
+const nestedObj = { a: { b: { c: 1 }, d: 2 }, e: 3 };
+4.Group Objects by a Property
+const students = [
+  { name: "John", grade: "A" },
+  { name: "Jane", grade: "B" },
+  { name: "Jake", grade: "A" },
+];
+5.Transform an Array to an Object
+const keys = ["a", "b", "c"];
+ 
+String 
+ 
+1.Convert a Sentence to Title Case
+const sentence = "hello world from javascript";
+2.Find Longest Word in a Sentence
+const input = "The quick brown fox jumped over the lazy dog";
+3.Count Words, Characters, and Spaces in a Sentence
+const str = "JavaScript is awesome!";
+4.Find First Non-Repeating Character
+const input = "aabbcde";
+ 
+Functions
+ 
+1.Check if Number is Even or Odd
+2.Sum of Array Elements using Function
+3.Arrow Function to Square a Number
+4.Function with Default Parameters
+5.Calculate Factorial of a Number
