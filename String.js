@@ -13,6 +13,7 @@ function toTitleCase(str) {
 console.log(toTitleCase(sentence)); // Output: Hello World From Javascript
 
 
+
 // Task: Find Longest Word in a Sentence
 const inputSentence = "The quick brown fox jumped over the lazy dog";
 function findLongestWord(str) {
@@ -31,10 +32,23 @@ console.log(findLongestWord(inputSentence)); // Output: jumped
 // Task: Count Words, Characters, and Spaces in a Sentence
 const str = "JavaScript is awesome!";
 function countWordsCharactersSpaces(sentence) {
-    const words = sentence.split(" ");
-    const wordCount = words.length;
-    const charCount = sentence.replace(/\s/g, "").length; // Exclude spaces
-    const spaceCount = sentence.split(" ").length - 1; // Count spaces
+    let wordCount = 0;
+    let charCount = 0;
+    let spaceCount = 0;
+    let inWord = false;
+    for (let i = 0; i < sentence.length; i++) {
+        const ch = sentence[i];
+        if (ch === ' ') {
+            spaceCount++;
+            inWord = false; // We are between words
+        } else {
+            charCount++; // Count character (non-space)
+            if (!inWord) {
+                wordCount++; // We are starting a new word
+                inWord = true;
+            }
+        }
+    }
     return {
         wordCount: wordCount,
         charCount: charCount,
@@ -42,7 +56,8 @@ function countWordsCharactersSpaces(sentence) {
     };
 }
 console.log(countWordsCharactersSpaces(str));
-// Output: { wordCount: 4, charCount: 21, spaceCount: 3 }
+//Output: { wordCount: 4, charCount: 22, spaceCount: 3 }
+
 
 
 // Task: Find First Non-Repeating Character
@@ -61,6 +76,21 @@ function firstNonRepeatingChar(str) {
 }
 console.log(firstNonRepeatingChar(inputString)); // Output: c
 
+// or else need to print all the Non repeating characters
 
- 
+const inputStrin = "aabbcde";
+function firstNonRepeatingChar(str) {
+    const charCount = {};
+    const result = [];
+    for (let char of str) {
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+    for (let char of str) {
+        if (charCount[char] === 1) {
+            result.push(char);
+        }
+    }
+    return result; // If no non-repeating character found
+}
+console.log(firstNonRepeatingChar(inputStrin)); 
 
